@@ -1,24 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-    entry: './src/App.js',
+    entry: './src/app/routes.js',
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'bin'),
-        // publicPath: '/bin/',
-        chunkFilename: '[name].chunk.js'
+        path: path.resolve(__dirname, 'bin')
     },
     module: {
-        rules: [
+        loaders: [
             {
-                test: /\.(jsx|js)$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['es2015','react']
-                    }
-                }
+                loader: 'babel-loader?presets[]=es2015&presets[]=react'
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
