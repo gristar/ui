@@ -3,8 +3,10 @@ const webpack = require('webpack');
 module.exports = {
     entry: './src/app/routes.js',
     output: {
+        path: path.resolve(__dirname, 'bin'),
+        publicPath: '/bin/', //dev需要写绝对路径
+        chunkFilename:'[name].chunk.js',
         filename: '[name].js',
-        path: path.resolve(__dirname, 'bin')
     },
     module: {
         loaders: [
