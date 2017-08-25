@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, mininum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/parallax-animation.css">
+    <style>
+        section[data-id="1"] {
+            background: url(img/bg1.jpg) no-repeat center/cover;
+        }
+        section[data-id="2"] {
+            background: url(img/zi_fm6.jpg) no-repeat center/cover;
+        }
+        section[data-id="3"] {
+            background: url(img/zi_fm4.jpg) no-repeat center/cover;
+        }
+        section[data-id="6"] {
+            background: url(img/zi_fm1.jpg) no-repeat center/cover;
+        }
+        section[data-id="7"] {
+            background: url(img/bg2.jpg) no-repeat center/contain;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-height: 100%;
+            min-width: 100%;
+            width: auto;
+        }
+        .txt_1_1 {
+            color: #FF6700;
+            font-size: 1rem;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 220px;
+        }
+        .txt_1_4 {
+            position: absolute;
+            bottom: 80px;
+            padding: 0 50px;
+            text-align: center;
+        }
+        .txt_2_1 {
+            position: absolute;
+            text-shadow: 1px 1px 2px #000;
+            bottom: 100px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #FF6700;
+        }
+        .txt_3_1 {
+            position: absolute;
+            text-shadow: 1px 1px 2px #000;
+            bottom: 100px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #FF6700;
+        }
+        .txt_4_1,.txt_5_1 {
+            position: absolute;
+            text-shadow: 1px 1px 2px #000;
+            bottom: 150px;
+            right: 10px;
+            font-size: 1.4rem;
+            color: #FF6700;
+        }
+        .txt_4_2,.txt_5_2 {
+            position: absolute;
+            text-shadow: 1px 1px 2px #000;
+            bottom: 100px;
+            right: 10px;
+            font-size: 1rem;
+            text-align: right;
+            color: #FF6700;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="pages">
+
+        <!-- 第一屏 -->
+        <section class="page">
+            <div class="txt_1_1" data-animation="fadeInToLeft" data-timing-function="ease" data-delay="400">[每一滴都来自静静的守候]</div>
+            <!--<div class="txt_1_2" data-animation="slideToTop" data-delay="300" data-timing-function="ease-out">大山深处的放养土蜂</div>-->
+            <!--<div class="txt_1_3" data-animation="slideToRight" data-delay="600" data-timing-function="linear">每一滴都来自大自然的馈赠</div>-->
+            <div class="txt_1_4" data-animation="fadeInToTop" data-delay="100" data-timing-function="ease">
+                <img src="img/txt1.png" alt="">
+            </div>
+        </section>
+
+        <!-- 第二屏 -->
+        <section class="page">
+            <div class="txt_2_1" data-animation="fadeInToRight">大山深处的放养土蜂</div>
+        </section>
+
+        <!-- 第三屏 -->
+        <section class="page">
+            <div class="txt_3_1" data-animation="fadeInToBottom">每一滴都来自大自然的馈赠</div>
+        </section>
+
+        <!-- 第四屏 -->
+        <section class="page">
+            <div class="video-bg">
+                <video src="img/zi_video_fm2.mp4" loop="loop" muted="muted" autoplay="autoplay"></video>
+            </div>
+            <div class="txt_4_1" data-animation="fadeInToTop">-- 去盖</div>
+            <div class="txt_4_2" data-animation="fadeInToBottom" data-delay="300">用割蜜刀把封盖蜜房的房盖割去</div>
+        </section>
+
+        <!-- 第五屏 -->
+        <section class="page">
+            <div class="video-bg">
+                <video src="img/zi_video_fm1.mp4" loop="loop" muted="muted" autoplay="autoplay"></video>
+            </div>
+            <div class="txt_5_1" data-animation="fadeInToTop">-- 摇蜜</div>
+            <div class="txt_5_2" data-animation="fadeInToBottom" data-delay="300">把去盖的蜂房放在特定装置中转动,用产生的离心力使蜂蜜分离出来</div>
+        </section>
+
+        <!-- 第六屏 -->
+        <section class="page">
+            <div class="txt_6_1" data-animation="fadeInToBottom" data-delay="300">成品展示</div>
+        </section>
+
+        <!-- 第七屏 -->
+        <section class="page">
+            <!--<div class="txt_7_1" data-animation="fadeInToBottom" data-delay="300">成品展示</div>-->
+        </section>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/parallax.js"></script>
+<script>
+    $('.pages').parallax({
+        direction: 'vertical',
+        swipeAnim: 'cover',
+        drag: true,
+        loading: true,
+        indicator: false,
+        arrow: true,
+        onchange: function(index, element, direction){
+            console.log`index:${index},element:${element},direction${direction}`
+        },
+        orientationchange: function(orientation) {
+
+        }
+    })
+</script>
+</body>
+</html>
