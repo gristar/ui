@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, mininum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Title</title>
+    <title>九宫森林谷蜂蜜</title>
     <link rel="stylesheet" href="css/parallax.css">
     <link rel="stylesheet" href="css/parallax-animation.css">
     <style>
         section[data-id="1"] {
-            background: url(img/bg1.jpg) no-repeat center/cover;
+            background: url(img/zi_fm6.jpg) no-repeat center/cover;
         }
         section[data-id="2"] {
             background: url(img/zi_fm6.jpg) no-repeat center/cover;
@@ -21,6 +21,9 @@
         }
         section[data-id="7"] {
             background: url(img/bg2.jpg) no-repeat center/contain;
+        }
+        .page {
+            display: flex;
         }
         .video-bg {
             position: absolute;
@@ -42,57 +45,107 @@
             min-width: 100%;
             width: auto;
         }
-        .txt_1_1 {
-            color: #FF6700;
-            font-size: 1rem;
+        .txt {
+            color: white;
+            font-size: .4rem;
             position: absolute;
-            width: 100%;
             text-align: center;
-            bottom: 220px;
+        }
+        .txt_bg {
+            background: rgba(254, 161, 42, .8);
+            border-radius: 3px;
+            padding: 1px 8px;
+        }
+        .txt_sd {
+            text-shadow: 1px 1px 2px #000;
+        }
+        .top_ct {
+            bottom: 1.5rem;
+        }
+        .subhead {
+            color: white;
+            font-size: .4rem;
+            position: absolute;
+            text-align: center;
+            background: rgba(254, 161, 42, .8);
+            border-radius: 3px;
+            padding: 1px 8px;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .botm_ct {
+            color: white;
+            font-size: .4rem;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            background: rgba(254, 161, 42, .8);
+            padding: 1px 8px;
+            text-shadow: 1px 1px 2px #000;
+            bottom: 2rem;
+        }
+        .botm_lt {
+            bottom: 1.5rem;
+            font-size: .4rem;
+        }
+        .txt_1_1 {
+            width: 100%;
+            bottom: 5.1rem;
+            color: #FF6700;
+            font-size: .3rem;
         }
         .txt_1_4 {
-            position: absolute;
-            bottom: 80px;
-            padding: 0 50px;
+            bottom: 1.7rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .txt_1_4 img{
+            width: 4.9rem;
+        }
+        .key {
+            color: #007aff;
+            text-decoration: underline;
+        }
+        .buy, .ask {
+            float: left;
+            width: 50%;
             text-align: center;
         }
-        .txt_2_1 {
-            position: absolute;
-            text-shadow: 1px 1px 2px #000;
-            bottom: 100px;
-            right: 10px;
-            font-size: 1.2rem;
-            color: #FF6700;
+        .taobaoImg {
+            width: 80px;
         }
-        .txt_3_1 {
+        .last {
+            background: rgba(255,255,255,.3);
+            width: 100%;
             position: absolute;
-            text-shadow: 1px 1px 2px #000;
-            bottom: 100px;
-            right: 10px;
-            font-size: 1.2rem;
-            color: #FF6700;
+            bottom: -6px;
+            padding: 6px 0;
+            box-sizing: border-box;
+            border-radius: 6px;
         }
-        .txt_4_1,.txt_5_1 {
-            position: absolute;
-            text-shadow: 1px 1px 2px #000;
-            bottom: 150px;
-            right: 10px;
-            font-size: 1.4rem;
-            color: #FF6700;
-        }
-        .txt_4_2,.txt_5_2 {
-            position: absolute;
-            text-shadow: 1px 1px 2px #000;
-            bottom: 100px;
-            right: 10px;
-            font-size: 1rem;
-            text-align: right;
-            color: #FF6700;
+        .qrcode {
+            width: 3rem;
+            border-radius: 6px;
         }
         img {
             width: 100%;
         }
     </style>
+    <script>
+        (function (win,doc){
+            if (!win.addEventListener) return;
+            var html=document.documentElement;
+            function setFont() {
+                var w = html.clientWidth,
+                    h = html.clientHeight;
+                html.style.fontSize= w > h ? w/1334*100+"px" : w/750*100+"px";
+            }
+            doc.addEventListener('DOMContentLoaded',setFont,false);
+            win.addEventListener('resize',setFont,false);
+            win.addEventListener('load',setFont,false);
+        })(window,document);
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -100,22 +153,24 @@
 
         <!-- 第一屏 -->
         <section class="page">
-            <div class="txt_1_1" data-animation="fadeInToLeft" data-timing-function="ease" data-delay="400">[每一滴都来自静静的守候]</div>
+            <div class="txt txt_1_1" data-animation="fadeInToLeft" data-timing-function="ease" data-delay="400">每一滴都来自静静的守候</div>
             <!--<div class="txt_1_2" data-animation="slideToTop" data-delay="300" data-timing-function="ease-out">大山深处的放养土蜂</div>-->
             <!--<div class="txt_1_3" data-animation="slideToRight" data-delay="600" data-timing-function="linear">每一滴都来自大自然的馈赠</div>-->
-            <div class="txt_1_4" data-animation="fadeInToTop" data-delay="100" data-timing-function="ease">
+            <div class="txt txt_1_4" data-animation="fadeInToTop" data-delay="100" data-timing-function="ease">
                 <img src="img/txt1.png" alt="">
             </div>
         </section>
 
         <!-- 第二屏 -->
         <section class="page">
-            <div class="txt_2_1" data-animation="fadeInToRight">大山深处的放养土蜂</div>
+            <div class="subhead" data-animation="fadeInToBottom">养殖环境</div>
+            <div class="txt txt_bg txt_sd botm_lt" data-animation="fadeInToRight" data-delay="300">位于国家级风景名胜区、国家级自然保护区、国家4A级旅游景区、国家级地质公园，<a class="key" href="https://baike.baidu.com/item/%E4%B9%9D%E5%AE%AB%E5%B1%B1/26849?fr=aladdin">九宫山</a>深处，放养的 <a class="key" href="https://baike.baidu.com/item/%E5%9C%9F%E8%9C%82/5452025?fr=aladdin">土蜂</a></div>
         </section>
 
         <!-- 第三屏 -->
         <section class="page">
-            <div class="txt_3_1" data-animation="fadeInToBottom">每一滴都来自大自然的馈赠</div>
+            <div class="subhead" data-animation="fadeInToBottom">养殖环境</div>
+            <div class="txt txt_bg txt_sd botm_lt" data-animation="fadeInToBottom" data-delay="300">看这些可爱的小东西,辛勤的吮吸着大自然的结晶，精心酿成甜甜的花蜜，贡献给人类</div>
         </section>
 
         <!-- 第四屏 -->
@@ -123,8 +178,11 @@
             <div class="video-bg">
                 <video src="img/zi_video_fm2.mp4" loop="loop" muted="muted" autoplay="autoplay"></video>
             </div>
-            <div class="txt_4_1" data-animation="fadeInToTop">-- 去盖</div>
-            <div class="txt_4_2" data-animation="fadeInToBottom" data-delay="300">用割蜜刀把封盖蜜房的房盖割去</div>
+            <div class="subhead" data-animation="fadeInToBottom">制作过程</div>
+            <div class="botm_ct">
+                <div data-animation="fadeInToTop">-- 去盖</div>
+                <div data-animation="fadeInToBottom" data-delay="300">用割蜜刀把封盖蜜房的房盖割去</div>
+            </div>
         </section>
 
         <!-- 第五屏 -->
@@ -132,18 +190,26 @@
             <div class="video-bg">
                 <video src="img/zi_video_fm1.mp4" loop="loop" muted="muted" autoplay="autoplay"></video>
             </div>
-            <div class="txt_5_1" data-animation="fadeInToTop">-- 摇蜜</div>
-            <div class="txt_5_2" data-animation="fadeInToBottom" data-delay="300">把去盖的蜂房放在特定装置中转动,用产生的离心力使蜂蜜分离出来</div>
+            <div class="subhead" data-animation="fadeInToBottom">制作过程</div>
+            <div class="botm_ct">
+                <div data-animation="fadeInToTop">-- 摇蜜</div>
+                <div data-animation="fadeInToBottom" data-delay="300">把去盖的蜂房放在特定装置中转动,用产生的离心力使蜂蜜分离出来</div>
+            </div>
         </section>
 
         <!-- 第六屏 -->
         <section class="page">
-            <div class="txt_6_1" data-animation="fadeInToBottom" data-delay="300">成品展示</div>
-        </section>
-
-        <!-- 第七屏 -->
-        <section class="page">
-            <!--<div class="txt_7_1" data-animation="fadeInToBottom" data-delay="300">成品展示</div>-->
+            <div class="subhead" data-animation="fadeInToBottom" data-delay="300">成品展示</div>
+            <div class="last" data-animation="fadeInToTop" data-delay="600">
+                <div class="ask">
+                    <img class="qrcode" src="img/qrcode.png" alt="二维码">
+                    <p>长按二维码咨询</p>
+                </div>
+                <div class="buy">
+                    <img class="taobaoImg" src="https://img.alicdn.com/tps/i4/TB1iTkVLFXXXXXNaXXXAF6IGpXX-160-66.png_80x80.jpg" alt="淘宝网">
+                    <p><a href="https://item.taobao.com/item.htm?id=557845741359">立即购买</a></p>
+                </div>
+            </div>
         </section>
     </div>
 </div>
